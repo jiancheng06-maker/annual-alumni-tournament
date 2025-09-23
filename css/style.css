@@ -1,0 +1,29 @@
+/* --- Google Fonts & Body Style --- */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* --- Filter Buttons --- */
+.team-filter-btn.active, .venue-filter-btn.active {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    border-color: #2563eb;
+}
+
+/* --- Hero Section Background --- */
+.hero-background {
+    /* The path is relative to the CSS file, so we go up one level */
+    background-image: url('../img/image.png');
+}
+
+/* --- Google Map Iframe --- */
+.map-iframe {
+    border: 0;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 350px;
+}

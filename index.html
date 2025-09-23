@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKUBA 飲料杯</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Hero Section -->
+    <div class="relative text-white text-center py-24 md:py-36 px-4 overflow-hidden">
+        <!-- Background Image with Effects -->
+        <div class="hero-background absolute inset-0 bg-cover bg-center opacity-80 blur-sm grayscale"></div>
+        <!-- Black Overlay for Contrast -->
+        <div class="absolute inset-0 bg-black opacity-[.15]"></div>
+        <!-- Content -->
+        <div class="relative z-10">
+            <p class="font-bebas text-2xl md:text-3xl text-gray-200 tracking-widest mb-2">TKUBA 飲料杯</p>
+            <h1 class="font-bebas text-6xl md:text-8xl font-bold tracking-wider text-white">TKUBA ALUMNI TOURNAMENT 2025</h1>
+            <p class="mt-4 text-xl md:text-2xl max-w-3xl mx-auto text-gray-100 tracking-wide">凝聚校友情誼 · 傳承團隊榮耀</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 mt-8">
+
+        <!-- Main Content Area -->
+        <main id="tournaments">
+            <!-- Year 2025 Card -->
+            <section id="year-2025" class="mb-12 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-8 tracking-wide font-bebas border-b-4 border-orange-500 pb-4">EVENT OF 2025</h2>
+
+                    <!-- Event Details -->
+                    <div class="mb-10 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <h3 class="text-2xl font-bold mb-5 text-slate-900 tracking-wide">活動簡介</h3>
+                        <div class="space-y-5 text-slate-700 leading-relaxed">
+                            <p><strong>活動宗旨：</strong>以籃球為媒介，凝聚淡江企管系校友與在校生情誼，深化與母校的連結，共同傳承企管系的團隊精神與榮耀。</p>
+                            <p><strong>活動時間：</strong>2025年10月18日 (六) 08:00 - 17:00</p>
+                            <div>
+                                <p><strong>活動地點：</strong>淡江大學紹謨紀念體育館 7 樓</p>
+                                <div class="mt-4 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                    <iframe src="https://maps.google.com/maps?q=淡江大學紹謨紀念體育館&t=&z=16&ie=UTF8&iwloc=&output=embed" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <p><strong>主辦單位：</strong>淡江大學企業管理學系系籃</p>
+                            <p><strong>活動對象：</strong>淡江大學企管系畢業校友與在學生</p>
+                            <p><strong>報名資格：</strong>共8支球隊，球員資格不限，每位球員僅可代表一隊參賽。</p>
+                        </div>
+                    </div>
+
+                    <!-- Schedule -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <h3 class="text-2xl font-bold mb-5 text-slate-900 tracking-wide">賽程表</h3>
+                        
+                        <!-- Filters -->
+                        <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                            <!-- Team Filter -->
+                            <div class="flex-1">
+                                <label class="block text-sm font-medium text-slate-600 mb-2">依隊伍篩選：</label>
+                                <div id="team-filter" class="flex flex-wrap gap-2">
+                                    <button class="team-filter-btn active transition-all duration-200 px-4 py-2 text-xs font-bold border-2 border-transparent rounded-full focus:outline-none" data-team="all">ALL TEAMS</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="在校生A">在校生A</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="富邦人壽元大鷹">富邦人壽元大鷹</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="GW">GW</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="9495">9495</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="在校生B">在校生B</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="9898">9898</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="彼得好嘉政X喜互惠">彼得好嘉政X喜互惠</button>
+                                    <button class="team-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-orange-500 hover:text-orange-500 focus:outline-none" data-team="飛皓科技">飛皓科技</button>
+                                </div>
+                            </div>
+                            <!-- Venue Filter -->
+                            <div class="flex-shrink-0">
+                                <label class="block text-sm font-medium text-slate-600 mb-2">依場地篩選：</label>
+                                <div id="venue-filter" class="flex flex-wrap gap-2">
+                                    <button class="venue-filter-btn active transition-all duration-200 px-4 py-2 text-xs font-bold border-2 border-transparent rounded-full focus:outline-none" data-venue="all">ALL VENUES</button>
+                                    <button class="venue-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-blue-500 hover:text-blue-500 focus:outline-none" data-venue="A場">A場</button>
+                                    <button class="venue-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-blue-500 hover:text-blue-500 focus:outline-none" data-venue="B場">B場</button>
+                                    <button class="venue-filter-btn transition-all duration-200 px-4 py-2 text-xs font-bold bg-white border-2 border-slate-300 rounded-full hover:border-blue-500 hover:text-blue-500 focus:outline-none" data-venue="C場">C場</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-xl overflow-hidden">
+                            <!-- Desktop Table -->
+                            <table id="schedule-table" class="hidden md:table w-full text-left">
+                                <thead class="bg-slate-800 text-white text-sm tracking-wider">
+                                    <tr>
+                                        <th class="p-4 font-semibold">時間</th>
+                                        <th class="p-4 font-semibold">比賽隊伍</th>
+                                        <th class="p-4 font-semibold">地點</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="在校生A|富邦人壽元大鷹" data-venue="A場"><td class="p-4">08:00-09:00</td><td class="p-4">在校生A vs 富邦人壽元大鷹</td><td class="p-4">A場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="在校生B|9898" data-venue="C場"><td class="p-4">08:00-09:00</td><td class="p-4">在校生B vs 9898</td><td class="p-4">C場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="在校生A|GW" data-venue="A場"><td class="p-4">09:00-10:00</td><td class="p-4">在校生A vs GW</td><td class="p-4">A場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="在校生B|彼得好嘉政X喜互惠" data-venue="C場"><td class="p-4">09:00-10:00</td><td class="p-4">在校生B vs 彼得好嘉政X喜互惠</td><td class="p-4">C場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="富邦人壽元大鷹|9495" data-venue="A場"><td class="p-4">10:00-11:00</td><td class="p-4">富邦人壽元大鷹 vs 9495</td><td class="p-4">A場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="9898|飛皓科技" data-venue="C場"><td class="p-4">10:00-11:00</td><td class="p-4">9898 vs 飛皓科技</td><td class="p-4">C場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="GW|9495" data-venue="A場"><td class="p-4">11:00-12:00</td><td class="p-4">GW vs 9495</td><td class="p-4">A場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="彼得好嘉政X喜互惠|飛皓科技" data-venue="C場"><td class="p-4">11:00-12:00</td><td class="p-4">彼得好嘉政X喜互惠 vs 飛皓科技</td><td class="p-4">C場</td></tr>
+                                    <tr class="game-item special-event font-bold text-white" data-teams="break" data-venue="break"><td class="p-3 text-center bg-amber-500" colspan="3">12:00 - 12:15 | ★ 全體大合照 ★ (GROUP PHOTO)</td></tr>
+                                    <tr class="game-item special-event" data-teams="break" data-venue="break"><td class="p-3 text-center font-semibold text-slate-500 bg-slate-200" colspan="3">12:15 - 13:00 | 午餐休息時間 (LUNCH BREAK)</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="在校生A|9495" data-venue="A場"><td class="p-4">13:00-14:00</td><td class="p-4">在校生A vs 9495</td><td class="p-4">A場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="在校生B|飛皓科技" data-venue="C場"><td class="p-4">13:00-14:00</td><td class="p-4">在校生B vs 飛皓科技</td><td class="p-4">C場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="富邦人壽元大鷹|GW" data-venue="A場"><td class="p-4">14:00-15:00</td><td class="p-4">富邦人壽元大鷹 vs GW</td><td class="p-4">A場</td></tr>
+                                    <tr class="game-item transition-colors duration-200 hover:bg-blue-50" data-teams="9898|彼得好嘉政X喜互惠" data-venue="C場"><td class="p-4">14:00-15:00</td><td class="p-4">9898 vs 彼得好嘉政X喜互惠</td><td class="p-4">C場</td></tr>
+                                    <tr class="game-item special-event font-bold text-white" data-teams="playoffs" data-venue="A場"><td class="p-4 bg-blue-600">15:00-16:00</td><td class="p-4 bg-blue-600">準決賽 (A組第一 vs B組第二)</td><td class="p-4 bg-blue-600">A場</td></tr>
+                                    <tr class="game-item special-event font-bold text-white" data-teams="playoffs" data-venue="B場"><td class="p-4 bg-blue-600">15:00-16:00</td><td class="p-4 bg-blue-600">準決賽 (B組第一 vs A組第二)</td><td class="p-4 bg-blue-600">B場</td></tr>
+                                    <tr class="game-item special-event font-bold text-white" data-teams="playoffs" data-venue="B場"><td class="p-4 bg-slate-500">16:00-17:00</td><td class="p-4 bg-slate-500">季軍賽</td><td class="p-4 bg-slate-500">B場</td></tr>
+                                    <tr class="game-item special-event font-bold text-white" data-teams="playoffs" data-venue="A場"><td class="p-4 bg-orange-600">16:00-17:00</td><td class="p-4 bg-orange-600">冠軍賽</td><td class="p-4 bg-orange-600">A場</td></tr>
+                                </tbody>
+                            </table>
+                            <!-- Mobile Cards -->
+                            <div id="schedule-cards" class="md:hidden space-y-3">
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="在校生A|富邦人壽元大鷹" data-venue="A場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">08:00-09:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">A場</p></div><p class="text-slate-800 font-bold">在校生A vs 富邦人壽元大鷹</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="在校生B|9898" data-venue="C場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">08:00-09:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">C場</p></div><p class="text-slate-800 font-bold">在校生B vs 9898</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="在校生A|GW" data-venue="A場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">09:00-10:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">A場</p></div><p class="text-slate-800 font-bold">在校生A vs GW</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="在校生B|彼得好嘉政X喜互惠" data-venue="C場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">09:00-10:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">C場</p></div><p class="text-slate-800 font-bold">在校生B vs 彼得好嘉政X喜互惠</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="富邦人壽元大鷹|9495" data-venue="A場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">10:00-11:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">A場</p></div><p class="text-slate-800 font-bold">富邦人壽元大鷹 vs 9495</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="9898|飛皓科技" data-venue="C場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">10:00-11:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">C場</p></div><p class="text-slate-800 font-bold">9898 vs 飛皓科技</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="GW|9495" data-venue="A場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">11:00-12:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">A場</p></div><p class="text-slate-800 font-bold">GW vs 9495</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="彼得好嘉政X喜互惠|飛皓科技" data-venue="C場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">11:00-12:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">C場</p></div><p class="text-slate-800 font-bold">彼得好嘉政X喜互惠 vs 飛皓科技</p></div>
+                                <div class="game-item special-event p-4 bg-amber-500 text-white rounded-xl shadow text-center" data-teams="break" data-venue="break"><p class="font-bold">12:00 - 12:15</p><p class="font-bold text-lg">★ 全體大合照 ★ (GROUP PHOTO)</p></div>
+                                <div class="game-item special-event p-4 bg-slate-200 rounded-xl shadow text-center font-semibold text-slate-500" data-teams="break" data-venue="break"><p>12:15 - 13:00</p><p>午餐休息時間 (LUNCH BREAK)</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="在校生A|9495" data-venue="A場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">13:00-14:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">A場</p></div><p class="text-slate-800 font-bold">在校生A vs 9495</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="在校生B|飛皓科技" data-venue="C場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">13:00-14:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">C場</p></div><p class="text-slate-800 font-bold">在校生B vs 飛皓科技</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="富邦人壽元大鷹|GW" data-venue="A場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">14:00-15:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">A場</p></div><p class="text-slate-800 font-bold">富邦人壽元大鷹 vs GW</p></div>
+                                <div class="game-item p-4 bg-white rounded-xl shadow border transition-all duration-200 hover:shadow-lg hover:scale-[1.02]" data-teams="9898|彼得好嘉政X喜互惠" data-venue="C場"><div class="flex justify-between items-center mb-2"><p class="font-semibold text-blue-700">14:00-15:00</p><p class="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">C場</p></div><p class="text-slate-800 font-bold">9898 vs 彼得好嘉政X喜互惠</p></div>
+                                <div class="game-item special-event p-4 bg-blue-600 text-white rounded-xl shadow" data-teams="playoffs" data-venue="A場"><p class="font-bold">15:00-16:00 | A場</p><p class="font-bold text-lg">準決賽 (A組第一 vs B組第二)</p></div>
+                                <div class="game-item special-event p-4 bg-blue-600 text-white rounded-xl shadow" data-teams="playoffs" data-venue="B場"><p class="font-bold">15:00-16:00 | B場</p><p class="font-bold text-lg">準決賽 (B組第一 vs A組第二)</p></div>
+                                <div class="game-item special-event p-4 bg-slate-500 text-white rounded-xl shadow" data-teams="playoffs" data-venue="B場"><p class="font-bold">16:00-17:00 | B場</p><p class="font-bold text-lg">季軍賽</p></div>
+                                <div class="game-item special-event p-4 bg-orange-600 text-white rounded-xl shadow" data-teams="playoffs" data-venue="A場"><p class="font-bold">16:00-17:00 | A場</p><p class="font-bold text-lg">冠軍賽</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 py-10 text-slate-400 bg-slate-900">
+            <p>&copy; 2025 TKUBA Department of Business Administration. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamFilterButtons = document.querySelectorAll('.team-filter-btn');
+            const venueFilterButtons = document.querySelectorAll('.venue-filter-btn');
+            const gameItems = document.querySelectorAll('.game-item');
+
+            let currentTeam = 'all';
+            let currentVenue = 'all';
+
+            function updateFilters() {
+                gameItems.forEach(item => {
+                    const itemTeams = item.getAttribute('data-teams');
+                    const itemVenue = item.getAttribute('data-venue');
+
+                    const teamMatch = currentTeam === 'all' || (itemTeams && itemTeams.includes(currentTeam));
+                    const venueMatch = currentVenue === 'all' || (itemVenue && itemVenue === currentVenue);
+
+                    // Special handling for break items, they should only be affected by team filter if you want them to hide.
+                    // For now, let's make them always visible when venue is 'all', regardless of team.
+                    if (itemTeams === 'break') {
+                        if (currentVenue === 'all') {
+                             item.style.display = item.tagName === 'TR' ? 'table-row' : 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                        return;
+                    }
+
+                    const isVisible = teamMatch && venueMatch;
+
+                    if (item.tagName === 'TR') {
+                        item.style.display = isVisible ? 'table-row' : 'none';
+                    } else {
+                        item.style.display = isVisible ? 'block' : 'none';
+                    }
+                });
+            }
+
+            teamFilterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    teamFilterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    currentTeam = this.getAttribute('data-team');
+                    updateFilters();
+                });
+            });
+
+            venueFilterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    venueFilterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    currentVenue = this.getAttribute('data-venue');
+                    updateFilters();
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
