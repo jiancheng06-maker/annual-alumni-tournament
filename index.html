@@ -13,8 +13,8 @@
         <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- Custom CSS (絕對路徑) -->
-        <link rel="stylesheet" href="/annual-alumni-tournament/css/style.css">
+        <!-- Custom CSS (相對路徑) -->
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 <body class="bg-slate-100 text-slate-800">
 
@@ -212,6 +212,16 @@
                 });
             });
         });
+    </script>
+
+    <!-- 補斜線安全程式 -->
+    <script>
+    (function() {
+      const path = window.location.pathname;
+      if (path.endsWith('annual-alumni-tournament')) {
+        window.location.replace(path + '/');
+      }
+    })();
     </script>
 
 </body>
