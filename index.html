@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <base href="https://jiancheng06-maker.github.io/annual-alumni-tournament/">
         <title>TKUBA 飲料杯</title>
 
         <!-- Google Fonts -->
@@ -219,8 +218,10 @@
     <script>
     (function() {
       const path = window.location.pathname;
-      if (path.endsWith('annual-alumni-tournament')) {
-        window.location.replace(path + '/');
+      // 若手機使用者進入沒有斜線的網址，補上以避免 404
+      if (path.match(/annual-alumni-tournament$/)) {
+        const newUrl = path + '/' + window.location.search + window.location.hash;
+        history.replaceState(null, '', newUrl);
       }
     })();
     </script>
